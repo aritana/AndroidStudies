@@ -1,0 +1,24 @@
+///Define settings needed to perform your project building
+buildscript {
+    //Add names of the repositories that Gradle should search for the libraries you use
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {'Necessary plugin dependencies, for Gradle itself'
+        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.1.51"
+    }
+}
+//repositories for all of your modules, not for Gradle itself
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+//The dependencies for each module are differente and should reside in the module-level build.gradle
