@@ -1,0 +1,36 @@
+
+The recyclerView lets you display large amounts of data in a list
+format.
+Each piece of data is treated as an item within the RecyclerView.
+In turn, each of these items makes up the entire contents of RV.
+
+RecyclerViews have two required components it uses to display
+a list of items, An adapter and ViewHolders.
+
+1: RV asks the adapter how many items it has and for a viewHolder
+at a given position.
+
+2: The adapter reaches into the pool of created ViewHolders it has.
+
+3: Either a viewHolder is returned to a data item at a given position
+
+4: The adapter binds the ViewHolder to a data item at a given position
+
+5. The viewHolder is returned to the RecyclerView for display
+
+
+adapters give the recycler view the data it wants to show.
+They have a clever way to calculate how many rows of data
+you want to show.
+
+ViewHolders are the visual containers for you item.
+Think of them as placeholders for each item in the table.
+This is where you tell the RV how each item should look.
+
+As you scroll throug a RecyclerView, instead of creating new View Holders,
+RecyclerView recycles ViewHOlders that move off-screen and popuates
+them with new data, ready to be shown at the bottom of the list.
+
+
+
+
