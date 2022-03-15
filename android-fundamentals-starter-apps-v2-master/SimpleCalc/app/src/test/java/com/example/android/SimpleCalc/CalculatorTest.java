@@ -16,22 +16,19 @@
 
 package com.example.android.SimpleCalc;
 
-import android.test.suitebuilder.annotation.SmallTest;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
-
 /**
  * JUnit4 unit tests for the calculator logic. These are local unit tests; no device needed
  */
 @RunWith(JUnit4.class)
-@SmallTest
 public class CalculatorTest {
 
     private Calculator mCalculator;
@@ -39,7 +36,7 @@ public class CalculatorTest {
     /**
      * Set up the environment for testing
      */
-    @Before
+    @Before //run before each test
     public void setUp() {
         mCalculator = new Calculator();
     }
@@ -51,8 +48,23 @@ public class CalculatorTest {
     public void addTwoNumbers() {
         double resultAdd = mCalculator.add(1d, 1d);
         assertThat(resultAdd, is(equalTo(2d)));
+
     }
 
+
+    @Test
+    public void given_negativeOperands_when_addTwoNumbers_then_shouldReturnNetativeResult() {
+    //Arrange
+        double firstOperator = -1.0;
+        double secondOperator = -3.0;
+
+    //Act
+        double resultAdd = mCalculator.add(firstOperator,secondOperator);
+
+    //Assert
+        assertThat(resultAdd, is(equalTo(-4d)));
+
+    }
 
 
 }
