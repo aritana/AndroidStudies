@@ -24,6 +24,7 @@ class DefaultCurrentActivityListener : Application.ActivityLifecycleCallbacks, C
         currentActivityStack.add(activity)
     }
 
+
     /**
      * Check if the activity of the given class is running
      * @param activityClass
@@ -54,8 +55,8 @@ class DefaultCurrentActivityListener : Application.ActivityLifecycleCallbacks, C
 
     }
 
-    override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle?) {
-
+    override fun onActivitySaveInstanceState(p0: Activity, p1: Bundle) {
+        TODO("Not yet implemented")
     }
 
     override fun onActivityDestroyed(activity: Activity) {

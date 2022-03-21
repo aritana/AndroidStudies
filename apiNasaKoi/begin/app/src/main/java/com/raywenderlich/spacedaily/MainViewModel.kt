@@ -24,22 +24,28 @@ package com.raywenderlich.spacedaily
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.raywenderlich.spacedaily.network.NASAAPIInterface
 import com.raywenderlich.spacedaily.network.PhotoResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.koin.core.KoinComponent
+import org.koin.core.inject
 
 interface MainView {
-  fun setDailyPhoto(dailyPhoto: PhotoResponse)
+    fun setDailyPhoto(dailyPhoto: PhotoResponse)
 }
 
-class MainViewModel : ViewModel() {
-  var view: MainView? = null
+class MainViewModel : ViewModel(), KoinComponent {
+    val nasaapiInterface: NASAAPIInterface by inject()
+    var view: MainView? = null
 
-  fun getDailyPhoto() {
-    viewModelScope.launch(Dispatchers.IO) {
-      withContext(Dispatchers.Main) {
-      }
+    fun getDailyPhoto() {
+        viewModelScope.launch(Dispatchers.IO) {
+            val dailyPhoto = nasaapiInterface.getDailyPhoto()
+            withContext(Dispatchers.Main) {
+                view?.setDailyPhoto(dailyPhoto)
+            }
+        }
     }
-  }
 }

@@ -5,6 +5,7 @@ apply plugin: 'kotlin-kapt'
 
 ext {
     koinVersion = "2.0.1"
+    koin_version = "2.0.1"
     moshiVersion = "1.8.0"
     glideVersion = "4.10.0"
     retrofitVersion = "2.6.1"
@@ -19,12 +20,12 @@ android {
             keyPassword 'spacedaily'
         }
     }
-    compileSdkVersion 29
+    compileSdkVersion 32
     buildToolsVersion "29.0.1"
     defaultConfig {
         applicationId "com.raywenderlich.spacedaily"
         minSdkVersion 22
-        targetSdkVersion 29
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -65,4 +66,10 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     testImplementation "org.koin:koin-test:$koinVersion"
     testImplementation 'com.nhaarman:mockito-kotlin:1.5.0'
+
+// Koin main features for Android
+    implementation "org.koin:koin-android:$koin_version"
+
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.1.0"
+
 }
