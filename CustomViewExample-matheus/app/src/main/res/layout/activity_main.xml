@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:text="Custom View only with code:" />
+
+    <com.example.customviewexample.views.MyCustomOnlyWithCodeView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="50dp"
+        app:exampleString="Teste"
+        app:exampleColor="@color/black"
+        app:exampleDimension="15sp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:text="Custom View only with XML:" />
+
+
+    <include
+        layout="@layout/view_my_custom_only_with_xml"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:text="Custom View with code and XML:" />
+
+    <com.example.customviewexample.views.MyFullCustomView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:exampleString="View with code and XML."
+        app:exampleColor="@color/teal_200"
+        app:exampleDimension="10sp"/>
+
+</LinearLayout>
