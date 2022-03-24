@@ -7,6 +7,7 @@ import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
+import io.mockk.mockk
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
@@ -30,7 +31,7 @@ class CalculatorSubTest {
     @Test
     fun `when call calculate should return sum value`() {
 
-      //  val dependencyOne = mockk<DependencyOne>()
+        val dependencyOne = mockk<DependencyOne>()
     //    val dependencyTwo = mockk<DependencyTwo>()
 
         every { dependencyOne.value } returns 5
