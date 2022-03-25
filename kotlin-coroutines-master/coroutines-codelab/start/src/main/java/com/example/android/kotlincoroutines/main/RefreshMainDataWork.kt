@@ -23,6 +23,7 @@ import androidx.work.WorkManager
 import androidx.work.Worker
 import androidx.work.WorkerFactory
 import androidx.work.WorkerParameters
+import kotlinx.coroutines.delay
 
 /**
  * Worker job to refresh titles from the network while the app is in the background.
@@ -50,4 +51,6 @@ class RefreshMainDataWork(context: Context, params: WorkerParameters, private va
         }
 
     }
+
+
 }

@@ -36,9 +36,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun heroDescription(): TextView = findViewById<Button>(R.id.heroDescriptionTextView)
 
-
-
-
     //Retrofit
 
     private fun requestRetrofit() {
