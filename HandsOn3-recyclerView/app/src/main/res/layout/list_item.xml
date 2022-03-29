@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_view_profile_picture"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/user_profile_picture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_view_name"
+        tools:src="@drawable/ic_sharp_star_24"
+        />
+
+    <TextView
+        android:id="@+id/text_view_name"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@id/image_view_profile_picture"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="VITORRR" />
+
+    <TextView
+        android:id="@+id/text_view_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/text_view_name"
+        app:layout_constraintTop_toBottomOf="@id/text_view_name"
+        tools:text="My description, big big big big big big big big big big big big big big big big big big bibg big big bibg big big big big big big big big big g big gib giDecripsiton" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_view_star_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="70dp"
+        app:tint="@color/yellow"
+        android:src="@drawable/ic_sharp_star_24"
+        app:layout_constraintEnd_toEndOf="@id/text_view_description"
+        app:layout_constraintTop_toBottomOf="@id/text_view_description" />
+
+    <TextView
+        android:id="@+id/text_view_likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/image_view_star_icon"
+        app:layout_constraintStart_toEndOf="@id/image_view_star_icon"
+        app:layout_constraintTop_toTopOf="@id/image_view_star_icon" />
+
+    <View
+        android:id="@+id/view_top_divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
