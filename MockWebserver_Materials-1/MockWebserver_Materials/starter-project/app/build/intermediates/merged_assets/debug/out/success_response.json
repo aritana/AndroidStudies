@@ -1,0 +1,30 @@
+[
+  {
+    "_id":"5a0fa4daae5bc100213c232e",
+    "name":"Hannah Abbott",
+    "role":"student",
+    "house":"Hufflepuff",
+    "school":"Hogwarts School of Witchcraft and Wizardry",
+    "__v":0,
+    "ministryOfMagic":false,
+    "orderOfThePhoenix":false,
+    "dumbledoresArmy":true,
+    "deathEater":false,
+    "bloodStatus":"half-blood",
+    "species":"human"
+  },
+  {
+    "_id":"5a0fa842ae5bc100213c2339",
+    "name":"Amelia Bones",
+    "role":"Head, Department of Magical Law Enforcement",
+    "house":"Hufflepuff",
+    "school":"Hogwarts School of Witchcraft and Wizardry",
+    "__v":0,
+    "ministryOfMagic":true,
+    "orderOfThePhoenix":true,
+    "dumbledoresArmy":false,
+    "deathEater":false,
+    "bloodStatus":"unknown",
+    "species":"human"
+  }
+]

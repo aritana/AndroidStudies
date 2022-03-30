@@ -1,0 +1,4 @@
+#Wed Mar 30 18:49:57 BRT 2022
+base.0=/home/aritanacs/AndroidStudioProjects/MockWebserver_Materials-1/MockWebserver_Materials/starter-project/app/build/intermediates/dex/debug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
