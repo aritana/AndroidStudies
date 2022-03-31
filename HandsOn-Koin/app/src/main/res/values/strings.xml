@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">HandsOn4</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_image">LoadImage</string>
+    <string name="menu_json">LoadJson</string>
+    <string name="menu_list">Hero List</string>
+    <string name="nothing">...</string>
+    <string name="fab">inferior button</string>
+    <string name="go_to_json">Go To Json</string>
+</resources>
