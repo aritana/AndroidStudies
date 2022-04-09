@@ -19,8 +19,9 @@ dependencies {
     testImplementation ("io.mockk:mockk:1.12.3")
     testImplementation("junit:junit:4.13")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
-
     runtimeOnly("org.jetbrains.kotlinx:kotlinx-coroutines-swing:1.6.0")
+
+
 }
 
 tasks.test {
