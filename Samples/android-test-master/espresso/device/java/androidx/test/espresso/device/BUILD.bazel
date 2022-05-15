@@ -1,0 +1,43 @@
+# EspressoDevice - the new Synchronized Device State Change API for Android.
+
+load("@io_bazel_rules_kotlin//kotlin:android.bzl", "kt_android_library")
+
+licenses(["notice"])
+
+package(default_visibility = [
+    "//espresso/device/java/androidx/test/espresso/device:device_pkg",
+])
+
+# Add only device packages here.
+package_group(
+    name = "device_pkg",
+    packages = [
+        "//espresso/device/...",
+    ],
+)
+
+kt_android_library(
+    name = "device",
+    exports = [
+        ":device_api",
+        "//espresso/device/java/androidx/test/espresso/device/action",
+        "//espresso/device/java/androidx/test/espresso/device/rules",
+    ],
+)
+
+kt_android_library(
+    name = "device_api",
+    srcs = glob(["*.kt"]),
+    plugins = ["//opensource/dagger:dagger_plugin"],  # Add programmatically
+    exports = [
+        "//espresso/device/java/androidx/test/espresso/device/action",
+    ],
+    deps = [
+        "//annotation/java/androidx/test/annotation",
+        "//espresso/device/java/androidx/test/espresso/device/action",
+        "//espresso/device/java/androidx/test/espresso/device/context",
+        "//espresso/device/java/androidx/test/espresso/device/dagger",
+        "//opensource/dagger",
+        "//runner/monitor/java/androidx/test:monitor",
+    ],
+)

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SharedPreferences</string>
+    <string name="first_name">Primeiro Nome</string>
+    <string name="e_mail">E-mail</string>
+    <string name="last_name">Último Nome</string>
+    <string name="entrar">Entrar</string>
+    <string name="token">Token</string>
+    <string name="sharedPreferenceName">Prefs</string>
+    <string name="nameLastName">%1$s</string>
+</resources>

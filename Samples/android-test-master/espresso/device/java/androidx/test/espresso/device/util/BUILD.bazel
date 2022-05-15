@@ -1,0 +1,18 @@
+# Description:
+#  Utility classes
+
+load("@io_bazel_rules_kotlin//kotlin:android.bzl", "kt_android_library")
+
+licenses(["notice"])
+
+package(default_visibility = [
+    "//espresso/device/java/androidx/test/espresso/device:device_pkg",
+])
+
+kt_android_library(
+    name = "util",
+    srcs = glob(["*.kt"]),
+    deps = [
+        "//runner/monitor",
+    ],
+)
