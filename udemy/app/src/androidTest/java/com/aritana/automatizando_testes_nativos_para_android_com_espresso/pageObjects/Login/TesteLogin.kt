@@ -1,5 +1,6 @@
 package com.aritana.automatizando_testes_nativos_para_android_com_espresso.pageObjects.Login
 
+import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
 import com.aritana.automatizando_testes_nativos_para_android_com_espresso.MainActivity
@@ -20,6 +21,7 @@ class TesteLogin {
 
     @Test
     fun testeLoginModeloPage() {
+        ActivityScenario.launch(MainActivity::class.java)
         robot.validarTituloNaTela(TITULO_APLICATIVO)
         robot.escreverEmail()
         robot.fecharTeclado()

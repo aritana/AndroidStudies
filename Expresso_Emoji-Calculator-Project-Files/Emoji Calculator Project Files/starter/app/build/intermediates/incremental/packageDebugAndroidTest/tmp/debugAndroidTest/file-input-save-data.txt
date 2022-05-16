@@ -1,7 +1,0 @@
-#Internal package file, do not edit.
-#Wed Mar 30 01:15:47 BRT 2022
-0.base=/home/aritanacs/AndroidStudioProjects/Expresso_Emoji-Calculator-Project-Files/Emoji Calculator Project Files/starter/app/build/intermediates/dex/debugAndroidTest/mergeDexDebugAndroidTest/out
-0.path=classes.dex
-count=1
-0.baseType=DIRECTORY
-0.set=DEX

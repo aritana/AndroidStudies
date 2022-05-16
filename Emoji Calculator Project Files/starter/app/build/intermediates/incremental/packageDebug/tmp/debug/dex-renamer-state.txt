@@ -1,0 +1,4 @@
+#Mon May 16 01:02:33 BRT 2022
+base.0=/home/aritanacs/AndroidStudioProjects/Emoji Calculator Project Files/starter/app/build/intermediates/dex/debug/mergeDexDebug/out
+renamed.0=classes.dex
+path.0=classes.dex
