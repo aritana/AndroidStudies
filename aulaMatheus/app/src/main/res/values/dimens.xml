@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="big_start_margin">32dp</dimen>
-    <dimen name="top_margin_from_screen">200dp</dimen>
-    <dimen name="small_margin">8dp</dimen>
-</resources>
