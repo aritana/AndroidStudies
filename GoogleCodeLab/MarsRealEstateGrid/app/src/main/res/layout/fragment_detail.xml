@@ -33,6 +33,7 @@
 
             <ImageView
                 android:id="@+id/main_photo_image"
+                app:imageUrl="@{viewModel.selectedProperty.imgSrcUrl}"
                 android:layout_width="0dp"
                 android:layout_height="266dp"
                 android:scaleType="centerCrop"
@@ -65,4 +66,11 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.android.marsrealestate.detail.DetailViewModel" />
+    </data>
 </layout>
